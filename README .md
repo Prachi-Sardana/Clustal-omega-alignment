@@ -1,5 +1,4 @@
 # Project Title
-## Assignment 6 -BINF6309 -Bioinformatics
 
 ## Authors
 -Prachi Sardana 
