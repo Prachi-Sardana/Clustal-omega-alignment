@@ -1,8 +1,6 @@
 # Project Title
 ## Assignment 6 -BINF6309 -Bioinformatics
 
-**NUID - 002938389**
-
 ## Authors
 -Prachi Sardana 
 -sardana.p@northeastern.edu
