@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+
+# Imported Biopython and SeqIo to parse the input and output files
+from Bio import SeqIO
+# Imported sequence from Biopython
+from Bio.Seq import Seq
+
+# Read the input FASTA file
+input_file = "APOE_refseq_transcript.fasta"
+
+# Parsed input file as fasta
+input_sequences = SeqIO.parse(input_file, "fasta")
+
+# Create an output file for the translated sequences
+output_file = "apoe_aa.fasta"
+output_handle = open(output_file, "w")
+# Loop over each sequence in the input file, translate it, and write it to the output file
+for sequence in input_sequences:
+    nucleotide_seq = sequence.seq
+    protein_seq = nucleotide_seq.translate()
+    output_handle.write(">" + sequence.description + "\n")
+    output_handle.write(str(protein_seq) + "\n")
+# Close the output file handle
+output_handle.close()
